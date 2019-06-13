@@ -31,7 +31,7 @@ namespace Courses.Tests
         [Fact]
         public void CourseConstructor_Sets_Name_On_CourseModel()
         {
-            var underTest = new Course(0, "Course Name");
+            var underTest = new Course(0, "Course Name", "");
 
             var result = underTest.Name;
 
@@ -41,11 +41,21 @@ namespace Courses.Tests
         [Fact]
         public void CourseConstructor_Sets_Id_On_CourseModel()
         {
-            var underTest = new Course(42, "");
+            var underTest = new Course(42, "", "");
 
             var result = underTest.Id;
 
             Assert.Equal(42, result);
+        }
+
+        [Fact]
+        public void CourseConstructor_Sets_Description_On_CourseModel()
+        {
+            var underTest = new Course(0, "", "Description of course");
+
+            var result = underTest.Description;
+
+            Assert.Equal("Description of course", result);
         }
 
     }
