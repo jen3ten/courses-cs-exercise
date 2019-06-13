@@ -1,4 +1,5 @@
 using Courses.Controllers;
+using Courses.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using Xunit;
@@ -15,6 +16,16 @@ namespace Courses.Tests
             var result = underTest.Index();
 
             Assert.IsType<ViewResult>(result);
+        }
+
+        [Fact]
+        public void Index_Passes_CourseModel_To_View()
+        {
+            var underTest = new CourseController();
+
+            var result = underTest.Index();
+
+            Assert.IsType<Course>(result.Model);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Courses.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,8 @@ namespace Courses.Controllers
     {
         public ViewResult Index()
         {
-            return View();
+            Course model = new Course();
+            return View(model);
         }
     }
 }
