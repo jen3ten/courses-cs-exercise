@@ -7,5 +7,11 @@ namespace Courses.Models
 {
     public class Course
     {
+        public string Name { get; set; }
+
+        public Course()
+        {
+            Name = "Course name";
+        }
     }
 }

@@ -27,5 +27,15 @@ namespace Courses.Tests
 
             Assert.IsType<Course>(result.Model);
         }
+
+        [Fact]
+        public void CourseConstructor_Sets_Name_On_CourseModel()
+        {
+            var underTest = new Course();
+
+            var result = underTest.Name;
+
+            Assert.NotNull(result);
+        }
     }
 }
