@@ -11,7 +11,7 @@ namespace Courses.Controllers
     {
         public ViewResult Index()
         {
-            Course model = new Course();
+            Course model = new Course(1, "Intro to MVC", "All you need to know about MVC");
             return View(model);
         }
     }

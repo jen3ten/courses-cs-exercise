@@ -1,4 +1,5 @@
-﻿
+﻿@model Courses.Models.Course
+
 @{
     Layout = null;
 }
@@ -12,5 +13,8 @@
 </head>
 <body>
     <h1>Courses List</h1>
+    <p>Title: <span>@Model.Name</span></p>
+    <p>Description: <span>@Model.Description</span></p>
+    
 </body>
 </html>
