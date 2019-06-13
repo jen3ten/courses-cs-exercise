@@ -31,11 +31,12 @@ namespace Courses.Tests
         [Fact]
         public void CourseConstructor_Sets_Name_On_CourseModel()
         {
-            var underTest = new Course();
+            var underTest = new Course("Course Name");
 
             var result = underTest.Name;
 
-            Assert.NotNull(result);
+            Assert.Equal("Course Name", result);
         }
+
     }
 }
