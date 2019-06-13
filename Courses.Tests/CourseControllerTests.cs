@@ -8,12 +8,16 @@ namespace Courses.Tests
 {
     public class CourseControllerTests
     {
+        CourseController underTest;
+
+        public CourseControllerTests()
+        {
+            underTest = new CourseController();
+        }
 
         [Fact]
         public void Index_Returns_A_View()
         {
-            var underTest = new CourseController();
-
             var result = underTest.Index();
 
             Assert.IsType<ViewResult>(result);
@@ -22,8 +26,6 @@ namespace Courses.Tests
         [Fact]
         public void Index_Passes_CourseModel_To_View()
         {
-            var underTest = new CourseController();
-
             var result = underTest.Index();
 
             Assert.IsType<Course>(result.Model);
