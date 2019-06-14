@@ -16,7 +16,7 @@ namespace Courses.Controllers
 
             CourseRepository courseRepo = new CourseRepository();
 
-            var model = courseRepo.GetById(0);
+            var model = courseRepo.GetAll();
 
             return View(model);
         }
