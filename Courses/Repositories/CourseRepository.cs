@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Courses.Repositories
 {
-    public class CourseRepository : Repository<Course>
+    public class CourseRepository : IRepository<Course>
     {
         public List<Course> coursesList;
 
@@ -18,6 +18,16 @@ namespace Courses.Repositories
                 new Course(2, "C# for Smarties", "It's all you need to learn it all"),
                 new Course(3, "HTML, CSS, JS, oh my!", "OMG, the front end will become your BFF")
             };
+        }
+
+        public IEnumerable<Course> GetAll()
+        {
+            return coursesList.ToList();
+        }
+
+        public Course GetById(int id)
+        {
+            return coursesList.Single(c => c.Id == id);
         }
     }
 }
