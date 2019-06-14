@@ -15,11 +15,11 @@ namespace Courses.Models
         {
         }
 
-        public Course(int id, string name, string description)
-        {
-            Id = id;
-            Name = name;
-            Description = description;
-        }
+        //public Course(int id, string name, string description)
+        //{
+        //    Id = id;
+        //    Name = name;
+        //    Description = description;
+        //}
     }
 }

@@ -11,6 +11,10 @@ namespace Courses.Data
     {
         public DbSet<Course> Courses { get; set; }
 
+        public CourseContext(DbContextOptions<CourseContext> options) : base(options)
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Course>().HasData(
