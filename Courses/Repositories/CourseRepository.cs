@@ -8,7 +8,7 @@ namespace Courses.Repositories
 {
     public class CourseRepository
     {
-        List<Course> coursesList;
+        public List<Course> coursesList;
 
         public CourseRepository()
         {
