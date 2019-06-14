@@ -18,7 +18,6 @@ namespace Courses.Controllers
 
             var model = courseRepo.coursesList[1];
 
-            //return View(model);
             return View(model);
         }
     }
