@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Courses.Repositories
 {
-    public class CourseRepository
+    public class CourseRepository : Repository<Course>
     {
         public List<Course> coursesList;
 
