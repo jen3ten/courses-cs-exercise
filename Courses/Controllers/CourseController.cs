@@ -10,11 +10,11 @@ namespace Courses.Controllers
 {
     public class CourseController : Controller
     {
+        private UniversityContext db;
+
         public ViewResult Index()
         {
-            //Course model = new Course(1, "Intro to MVC", "All you need to know about MVC");
-
-            CourseRepository courseRepo = new CourseRepository();
+            CourseRepository courseRepo = new CourseRepository(db);
 
             var model = courseRepo.GetAll();
 
