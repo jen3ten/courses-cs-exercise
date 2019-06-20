@@ -1,5 +1,6 @@
 using Courses.Controllers;
 using Courses.Models;
+using Courses.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,10 +11,11 @@ namespace Courses.Tests
     public class CourseControllerTests
     {
         CourseController underTest;
+        IRepository<Course> courseRepo;
 
         public CourseControllerTests()
         {
-            underTest = new CourseController();
+            underTest = new CourseController(courseRepo);
         }
 
         [Fact]
