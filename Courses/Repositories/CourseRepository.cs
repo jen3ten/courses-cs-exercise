@@ -16,13 +16,6 @@ namespace Courses.Repositories
         public CourseRepository(UniversityContext db)
         {
             this.db = db;
-
-            //coursesList = new List<Course>()
-            //{
-            //    new Course(1, "Machine Learning", "Machine learning for humans"),
-            //    new Course(2, "C# for Smarties", "It's all you need to learn it all"),
-            //    new Course(3, "HTML, CSS, JS, oh my!", "OMG, the front end will become your BFF")
-            //};
         }
 
         public IEnumerable<Course> GetAll()

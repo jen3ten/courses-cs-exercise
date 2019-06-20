@@ -21,5 +21,32 @@ namespace Courses
             base.OnConfiguring(optionsBuilder);
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Course>().HasData(
+                new Course()
+                {
+                    Id = 1,
+                    Name = "Machine Learning",
+                    Description = "Machine learning for humans",
+                },
+
+                new Course()
+                {
+                    Id = 2,
+                    Name = "C# for Smarties",
+                    Description = "It's all you need to learn it all",
+                },
+
+                new Course()
+                {
+                    Id = 3,
+                    Name = "HTML, CSS, JS, oh my!",
+                    Description = "OMG, the front end will become your BFF",
+                });
+                        
+            base.OnModelCreating(modelBuilder);
+        }
+
     }
 }
