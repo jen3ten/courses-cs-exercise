@@ -14,15 +14,15 @@ namespace Courses.Models
         public int InstructorId { get; set; }
         public Instructor Instructor { get; set; }
 
-        //public Course()
-        //{
-        //}
+        public Course()
+        {
+        }
 
-        //public Course(int id, string name, string description)
-        //{
-        //    Id = id;
-        //    Name = name;
-        //    Description = description;
-        //}
+        public Course(int id, string name, string description)
+        {
+            Id = id;
+            Name = name;
+            Description = description;
+        }
     }
 }
