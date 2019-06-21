@@ -11,15 +11,18 @@ namespace Courses.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public Course()
-        {
-        }
+        public int InstructorId { get; set; }
+        public Instructor Instructor { get; set; }
 
-        public Course(int id, string name, string description)
-        {
-            Id = id;
-            Name = name;
-            Description = description;
-        }
+        //public Course()
+        //{
+        //}
+
+        //public Course(int id, string name, string description)
+        //{
+        //    Id = id;
+        //    Name = name;
+        //    Description = description;
+        //}
     }
 }
