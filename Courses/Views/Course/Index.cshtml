@@ -13,12 +13,11 @@
 </head>
 <body>
     <h1>Courses List</h1>
-    @foreach(var course in Model)
+    @foreach (var course in Model)
     {
-        <p>Title: <span>@course.Name</span></p>
-        <p>Description: <span>@course.Description</span></p>
+        <p>Title: <a href="Course/Details/@course.Id">@course.Name</a></p>
         <hr />
     }
-    
+
 </body>
 </html>
