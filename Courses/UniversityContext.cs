@@ -10,13 +10,13 @@ namespace Courses
     public class UniversityContext : DbContext
     {
         public DbSet<Course> Courses { get; set; }
+        public DbSet<Instructor> Instructors { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=JEUniversityDB;Trusted_Connection=True;";
 
-            optionsBuilder.UseSqlServer(connectionString)
-                          .UseLazyLoadingProxies();
+            optionsBuilder.UseSqlServer(connectionString);
 
             base.OnConfiguring(optionsBuilder);
         }
@@ -44,7 +44,20 @@ namespace Courses
                     Name = "HTML, CSS, JS, oh my!",
                     Description = "OMG, the front end will become your BFF",
                 });
-                        
+
+            modelBuilder.Entity<Instructor>().HasData(
+                new Instructor()
+                {
+                    Id = 1,
+                    Name = "Jen",
+                },
+
+                new Course()
+                {
+                    Id = 2,
+                    Name = "Ernest",
+                });
+
             base.OnModelCreating(modelBuilder);
         }
 
