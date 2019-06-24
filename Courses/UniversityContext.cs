@@ -56,7 +56,7 @@ namespace Courses
                     Name = "Jen",
                 },
 
-                new Course()
+                new Instructor()
                 {
                     Id = 2,
                     Name = "Ernest",
