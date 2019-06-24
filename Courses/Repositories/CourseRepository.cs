@@ -33,5 +33,6 @@ namespace Courses.Repositories
             db.Courses.Add(course);
             db.SaveChanges();
         }
+
     }
 }

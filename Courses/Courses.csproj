@@ -9,6 +9,8 @@
     <Compile Remove="Migrations\20190621195934_AddedLazyLoading.Designer.cs" />
     <Compile Remove="Migrations\20190624031033_FixedInstructorSeedData.cs" />
     <Compile Remove="Migrations\20190624031033_FixedInstructorSeedData.Designer.cs" />
+    <Compile Remove="Migrations\20190624202515_InstructorListAddedToCourseModel.cs" />
+    <Compile Remove="Migrations\20190624202515_InstructorListAddedToCourseModel.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
