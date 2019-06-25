@@ -34,6 +34,11 @@ namespace Courses.Repositories
             return db.Courses.Single(c => c.Id == id);
         }
 
+        public void Delete(Course course)
+        {
+            db.Courses.Remove(course);
+            db.SaveChanges();
+        }
 
     }
 }
