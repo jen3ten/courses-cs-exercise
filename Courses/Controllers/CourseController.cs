@@ -49,5 +49,19 @@ namespace Courses.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            var model = courseRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Course course)
+        {
+            courseRepo.Delete(course);
+            return RedirectToAction("Index");
+        }
+
     }
 }
