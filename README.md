@@ -1,6 +1,6 @@
 # courses-cs-exercise
 
-This project and its branches demonstrate the MVC pattern, repository pattern, EF, forms, and tag helpers.  The initial skeleton project can be found in the master branch.  All subsequent branches add one feature and build off of each other.  The order of branches is listed below, followed by an explanation of the workshops.
+The Courses project consists of a SQL database of courses and instructor tables with a one-to-many relationship.  It utilizes C#/ASP.NET Core and Entity Framework.  Various CRUD views have been added on the front end.  This project and its branches demonstrate the MVC pattern, repository pattern, EF, forms, and tag helpers.  The initial skeleton project can be found in the master branch.  All subsequent branches add one feature and build off of each other.  The order of branches is listed below, followed by an explanation of the workshops.
 
 ## Repository Pattern Branch
 
