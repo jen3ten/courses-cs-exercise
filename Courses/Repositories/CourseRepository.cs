@@ -13,15 +13,21 @@ namespace Courses.Repositories
 
         private UniversityContext db;
 
+        public CourseRepository(UniversityContext db)
+        {
+            this.db = db;
+        }
+
         public void Create(Course course)
         {
             db.Courses.Add(course);
             db.SaveChanges();
         }
 
-        public CourseRepository(UniversityContext db)
+        public void Delete(Course course)
         {
-            this.db = db;
+            db.Courses.Remove(course);
+            db.SaveChanges();
         }
 
         public IEnumerable<Course> GetAll()
@@ -32,12 +38,6 @@ namespace Courses.Repositories
         public Course GetById(int id)
         {
             return db.Courses.Single(c => c.Id == id);
-        }
-
-        public void Delete(Course course)
-        {
-            db.Courses.Remove(course);
-            db.SaveChanges();
         }
 
     }
