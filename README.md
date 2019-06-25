@@ -1,6 +1,6 @@
 # courses-cs-exercise
 
-This project and its branches demonstrates the MVC pattern, repository pattern, EF, forms, and tag helpers.  The initial skeleton project can be found in the master branch.  All subsequent branches add one feature and build off of each other.  The order of branches is listed below, with an explanation of the workshop following.
+This project and its branches demonstrate the MVC pattern, repository pattern, EF, forms, and tag helpers.  The initial skeleton project can be found in the master branch.  All subsequent branches add one feature and build off of each other.  The order of branches is listed below, followed by an explanation of the workshops.
 
 ## Repository Pattern Branch
 
