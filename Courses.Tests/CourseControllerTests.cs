@@ -28,5 +28,15 @@ namespace Courses.Tests
             Assert.IsType<ViewResult>(result);
         }
 
+        [Fact]
+        public void Index_Passes_All_Courses_To_View()
+        {
+            var expectedCourses = new List<Course>();
+            courseRepo.GetAll().Returns(expectedCourses);
+
+            var result = underTest.Index();
+
+            Assert.Equal(expectedCourses, result.Model);
+        }
     }
 }
