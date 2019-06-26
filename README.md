@@ -48,6 +48,6 @@ NOT USED- add-dbContext
  ## Course Delete Branch
  ## Controller Test Branch
  1. Add NSubtitute dependency and a using statement to the test project
- 2. In test controller, use NSubstitute as a Substitute.For the repository
+ 2. In test constructor, use NSubstitute as a Substitute.For the repository
  3. For tests that use the repository, call the method followed by the NSubstitute Returns() method to return the expected value
  
