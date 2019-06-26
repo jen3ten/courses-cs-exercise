@@ -16,6 +16,7 @@ namespace Courses.Tests
 
         public CourseControllerTests()
         {
+            courseRepo = Substitute.For<IRepository<Course>>();
             underTest = new CourseController(courseRepo);
         }
 
@@ -25,14 +26,6 @@ namespace Courses.Tests
             var result = underTest.Index();
 
             Assert.IsType<ViewResult>(result);
-        }
-
-        [Fact]
-        public void Index_Passes_CourseModel_To_View()
-        {
-            var result = underTest.Index();
-
-            Assert.IsType<List<Course>>(result.Model);
         }
 
     }
