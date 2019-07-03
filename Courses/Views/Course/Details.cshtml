@@ -17,10 +17,17 @@
     <p>Title: <span>@Model.Name</span></p>
     <p>Instructor: <a href="/Instructor/Details/@Model.InstructorId">@Model.Instructor.Name</a></p>
     <p>Description: <span>@Model.Description</span></p>
-    <hr />
-    <a href="/Course/Index">Return to Courses List</a>
-    <hr />
-    <a href="/Course/Delete/@Model.Id">Delete this Course</a>
+    <p>Students:</p>
+    <li>
+        @foreach (var student in Model.StudentCourses)
+        {
+            <ol>@student</ol>
+        }
+    </li>
+        <hr />foreach
+        <a href="/Course/Index">Return to Courses List</a>
+        <hr />
+        <a href="/Course/Delete/@Model.Id">Delete this Course</a>
 
 </body>
 </html>
