@@ -15,7 +15,7 @@ namespace Courses.Models
         public virtual int InstructorId { get; set; }
         public virtual Instructor Instructor { get; set; }
 
-        public List<StudentCourse> StudentCourses { get; set; }
+        public virtual List<StudentCourse> StudentCourses { get; set; }
 
         public Course()
         {
